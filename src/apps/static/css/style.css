@@ -1,0 +1,696 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Muli';
+}
+
+
+.header_main {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header_main .header_startproject {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header_main .header_startproject a {
+    text-decoration: none;
+    border: 1px solid #e6e6e6;
+    padding: 3px;
+    border-radius: 3px;
+    font-size: 10px;
+    /* background-color: #63b1e5; */
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition-property: background-color;
+    transition-duration: 0.3s;
+}
+
+.header_main .header_startproject a:hover {
+    background-color: #e6e6e6;
+}
+
+
+
+.header_main .header_logo {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header_main .header_logo a {
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    color: black;
+}
+
+.header_main .login_true, .login_false {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.header_main .login_true img {
+    border-radius: 50%;
+}
+
+
+.header_main .login_false a {
+    border: 1px solid #e6e6e6;
+    padding: 3px;
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 3px;
+    text-transform: uppercase;
+    color: black;
+    text-decoration: none;
+    transition-property: background-color;
+    transition-duration: 0.3s;
+}
+
+.header_main .login_false a:hover {
+    background-color: #e6e6e6;
+}
+
+
+
+
+.header_menu {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.header_menu ul li {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: normal;
+    margin: 10px 20px;
+}
+
+.header_menu ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: grey;
+}
+
+.profiles_container {
+    width: 80%;
+    margin: 10px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.profiles_container .profiles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.profiles_container .profiles img {
+    border-radius: 50%;
+}
+
+.profiles_container .profiles a {
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+
+.profile_container {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.profile_container .profile_info  {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    padding: 0;
+}
+
+.profile_container .profile_info .profile_info_img {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile_container .profile_info .profile_info_img img {
+    border-radius: 50%;
+}
+
+.profile_container .profile_info .profile_user_info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* padding: 10px; */
+}
+
+.profile_container .profile_info .profile_user_info span {
+    font-weight: bold;
+    color: black;
+    font-size: 20px;
+}
+
+.profile_container .profile_info .profile_user_info p {
+    font-size: 14px;
+    color: grey;
+    font-weight: normal;
+}
+
+.profile_info .profile_user_info .social_links_profle {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.profile_user_info .social_links_profle a {
+    margin: 5px;
+}
+
+
+.login_container {
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.login_container input {
+    width: 400px;
+    margin: 10px;
+    background-color: white;
+    padding: 3px;
+    border-radius: 3px;
+    font-size: 14px;
+    border: 2px solid black;
+    outline: none;
+}
+
+.login_container label {
+    font-size: 10px;
+}
+
+.login_container button {
+    border: 1px solid #e6e6e6;
+    background-color: white;
+    color: black;
+    padding: 3px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 3px;
+    cursor: pointer;
+    transition-property: background-color;
+    transition-duration: 0.3s;
+}
+
+
+.login_container button:hover {
+    background-color: #e6e6e6;
+}
+
+
+.btn_logout {
+    text-decoration: none;
+    font-size: 10px;
+    border: 1px solid #e6e6e6;
+    padding: 3px;
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 3px;
+    background-color: white;
+    transition-property: background-color;
+    transition-duration: 0.3s;
+}
+
+
+.btn_logout:hover {
+    background-color: #e6e6e6;
+}
+
+.register_container {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.register_container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.register_container input {
+    width: 400px;
+    margin: 10px;
+    background-color: white;
+    padding: 3px;
+    border-radius: 3px;
+    font-size: 14px;
+    border: 2px solid black;
+    outline: none;
+}
+
+.register_container input[type='file'] {
+    display: none;
+}
+
+.register_container textarea {
+    margin: 10px;
+    width: 400px;
+    height: 150px;
+    resize: none;
+    background-color: white;
+    padding: 3px;
+    border-radius: 3px;
+    font-size: 14px;
+    border: 2px solid black;
+    outline: none;
+}
+
+.register_container label {
+    font-size: 10px;
+}
+
+
+.register_container form button {
+    background-color: white;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    padding: 3px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.register_container form button:hover {
+    background-color: #e6e6e6;
+}
+
+.btn_update {
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: bold;
+    color: #e6e6e6;
+}
+
+
+.update_container {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.update_container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.update_container input[type='text'] {
+    width: 400px;
+    margin: 10px;
+    padding: 3px;
+    border: 2px solid black;
+    border-radius: 3px;
+    font-size: 12px;
+    outline: none;
+}
+
+.update_container textarea {
+    width: 400px;
+    margin: 10px;
+    padding: 3px;
+    border: 2px solid black;
+    border-radius: 3px;
+    font-size: 12px;
+    resize: none;
+    outline: none;
+}
+
+.update_container input[type='file'] {
+    border: none;
+}
+
+.update_container input[type='submit'] {
+    background-color: white;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    font-size: 12px;
+    padding: 3px;
+    margin: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: bold;
+    transition-property: background-color;
+    transition-duration: 0.3s;
+}
+
+.update_container input[type='submit']:hover {
+    background-color: #e6e6e6;
+}
+
+
+.update_container label {
+    font-size: 10px;
+}
+
+
+.main_container {
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.main_container .main_post {
+    width: 70%;
+    border: 1px solid #e6e6e6;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.main_container .main_post .main_title {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.main_container .main_post .main_type {
+    font-size: 10px;
+    color: #5fb4f5;
+}
+
+.main_container .main_post .main_description {
+    font-size: 14px;
+    color: grey;
+}
+
+.main_container .main_post .main_location_p {
+    font-size: 10px;
+    color: grey;
+    margin: 10px 0;
+}
+
+.main_container .main_post .main_createtime {
+    font-size: 10px;
+    color: #e6e6e6;
+}
+
+
+.main_container .main_post .main_location {
+    font-size: 10px;
+    color: white;
+    background-color: #5fb4f5;
+    border: 1px solid #5fb4f5;
+    padding: 3px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.main_container .main_post .user_info {
+    display: flex;
+    align-items: center;
+}
+
+.main_container .main_post .user_info img {
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+
+.main_container .main_post .user_info a {
+    text-decoration: none;
+    color: grey;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.partners_container {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.partners_h1 {
+    text-align: center;
+}
+
+.profiles_posts {
+    margin: 20px auto;
+}
+
+.detail_container {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.article_container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 10px;
+    position: relative;
+}
+
+.article_container h2 {
+    text-align: center;
+}
+
+.article_container .article_contact {
+    text-align: center;
+    font-size: 14px;
+}
+
+
+.article_container .article_location {
+    color: white;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    border: 2px solid #5fb4f5;
+    border-radius: 3px;
+    padding: 3px 20px;
+    background-color: #5fb4f5;
+}
+
+.article_container .article_description {
+    width: 70%;
+    margin: 10px auto;
+}
+
+.article_container .article_time {
+    font-size: 10px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+
+.article_container .article_user_info {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.article_container .article_user_info img {
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.article_container .article_user_info a {
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    color: grey;
+}
+
+.delete_container {
+    text-align: center;
+    margin: 50px;
+}
+
+.btn_delete {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: white;
+    color: black;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.update_delete_container {
+    position: absolute;
+    right: 0;
+    top: -20px;
+}
+
+.update_delete_container a {
+    text-decoration: none;
+    font-size: 10px;
+    color: grey;
+    text-transform: uppercase;
+}
+
+.new_container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.new_container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.new_container form input[type='text'] {
+    width: 400px;
+    margin: 10px;
+    border: 2px solid black;
+    border-radius: 3px;
+    outline: none;
+    padding: 3px;
+}
+
+.new_container form textarea {
+    width: 400px;
+    height: 150px;
+    resize: none;
+    border: 2px solid black;
+    border-radius: 3px;
+    padding: 3px;
+    outline: none;
+}
+
+.new_container form label {
+    font-size: 10px;
+}
+
+
+.new_container form input[type='submit'] {
+    border: 1px solid #e6e6e6;
+    margin: 10px;
+    background-color: white;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 3px;
+    outline: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition-property: background-color;
+    transition-duration: 0.3s;
+}
+
+.new_container form input[type='url'] {
+    border: 2px solid black;
+    width: 400px;
+    padding: 3px;
+    border-radius: 3px;
+}
+
+.new_container form input[type='submit']:hover {
+    background-color: #e6e6e6;
+}
+
+.comments_container {
+    width: 60%;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.comments_container .comment {
+    margin: 10px;
+}
+
+
+.comment_info_user {
+    display: flex;
+    align-items: center;
+}
+
+
+.comment_info_user img {
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.comment_info_user a {
+    font-size: 12px;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+
+.comment_text {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.comment_form {
+    width: 60%;
+    margin: 20px auto;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.comment_form form input {
+    width: 400px;
+    padding: 3px;
+    font-size: 12px;
+    border-radius: 3px;
+    border: 1px solid black;
+    outline: none;
+}
+
+.comment_form form button {
+    background-color: white;
+    border: 1px solid #e6e6e6;
+    padding: 3px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition-property: background-color;
+    transition-duration: 0.3s;
+}
+
+.comment_form form button:hover {
+    background-color: #e6e6e6;
+}

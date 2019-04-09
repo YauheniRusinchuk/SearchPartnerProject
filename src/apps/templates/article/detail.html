@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+        <div class='article_container'>
+            {% if user.profile == ob.user %}
+                <div class='update_delete_container'>
+                    <a href="{{ob.get_absolute_url_update}}">edit</>
+                    <a href="{{ob.get_absolute_url_delete}}">delete</a>
+                </div>
+            {% endif %}
+            <h2>{{ob.title}}</h2>
+            <p class='article_location'>{{ob.location}}</p>
+            <p class='article_description'>{{ob.description}}</p>
+            <p class='article_time'>{{ob.create_date|date:"M d, Y"}}</p>
+            {% if ob.contact %}
+            <h2>Contact</h2>
+            <p class='article_contact'>{{ob.contact}}</p>
+            {% endif %}
+            <div class='article_user_info'>
+                {% if ob.user.img %}
+                    <img src={{ob.user.img.url}} width="30" height="30" />
+                {% else %}
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVFilEhfPhyV9IK381IiXSRYG5xrEEs-qyKcUaFZvZx54nnbVTog" width="30" height="30" />
+                {% endif %}
+                <a href="{{ob.user.get_absolute_url}}">{{ob.user.full_name}}</a>
+            </div>
+        </div>
+
+
+        <div class='comments_container'>
+            <h4>Comments</h4>
+            {% if ob.comment_set.all %}
+                {% for comment in ob.comment_set.all  %}
+                    <div class='comment'>
+                        <div class='comment_info_user'>
+                            {% if comment.user.img %}
+                                <img src={{comment.user.img.url}} width="30" height="30" />
+                            {% else %}
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVFilEhfPhyV9IK381IiXSRYG5xrEEs-qyKcUaFZvZx54nnbVTog" width="30" height="30" />
+                            {% endif %}
+                            <a href="{{comment.user.get_absolute_url}}">{{comment.user.full_name}}</a>
+                        </div>
+                        <span class='comment_text'>{{comment.text}}</span>
+                    </div>
+                {% endfor %}
+            {% else %}
+                    <p>Not comments</p>
+            {% endif %}
+        </div>
+        {% if user.is_authenticated %}
+        <div class='comment_form'>
+            <form method="post">{% csrf_token %}
+                <input name='text' type='text' placeholder="Comment ..." />
+                <button type="submit" name="button">add</button>
+            </form>
+        </div>
+        {% endif %}
+
+{% endblock %}

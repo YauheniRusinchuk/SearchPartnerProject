@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<div class='main_container'>
+    {% for ob in object_list %}
+    <div class='main_post'>
+        <a class='main_title' href="{{ob.get_absolute_url}}">{{ob.title}}</a><br/>
+        <span class='main_type'>{{ob.type}}</span>
+        <p class='main_description'>{{ob.description}}</p>
+        <p class='main_createtime'>{{ob.create_date|date:"M d, Y"}}</p>
+        <p class='main_location_p'>location : <span class='main_location'>{{ob.location}}</span></p>
+        <div class='user_info'>
+            {% if ob.user.img %}
+                <img src={{ob.user.img.url}} width="30" height="30" />
+            {% else %}
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVFilEhfPhyV9IK381IiXSRYG5xrEEs-qyKcUaFZvZx54nnbVTog" width="30" height="30" />
+            {% endif %}
+            <a href="{{ob.user.get_absolute_url}}">{{ob.user.full_name}}</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+
+{% endblock %}

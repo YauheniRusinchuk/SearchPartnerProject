@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+    <div class='login_container'>
+        <h5> Login in your profile. Or <a href="{% url 'main:register:register_page' %}">register</a></h5>
+        <form method="POST">{% csrf_token %}
+            {{form.as_p}}
+        <button type='submit'> login </button>
+        </form>
+    </div>
+
+{% endblock %}

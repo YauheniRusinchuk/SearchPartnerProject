@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class='register_container'>
+        <form method="post" enctype="multipart/form-data">{% csrf_token %}
+            <label for="firstname">Firstname</label>
+            <input name='firstname' type='text' id='firstname' placeholder="firstname ..." />
+            <label for='lastname'>Lastname</label>
+            <input name='lastname'  type='text' placeholder="lastname ..." />
+            <label for='description'>Description</label>
+            <textarea name='description' id='description' placeholder="description ..."></textarea>
+            <label for='email' >Email</label>
+            <input name='email'  id='email' type="email" placeholder="email ..." />
+            <label for='password'>Password</label>
+            <input name='password' id='password' type="password" placeholder="password ..." />
+            <button type='submit'>register</button>
+        </form>
+    </div>
+
+{% endblock %}

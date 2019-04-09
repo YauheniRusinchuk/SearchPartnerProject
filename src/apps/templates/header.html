@@ -1,0 +1,26 @@
+{% load static %}
+<div class="header_main">
+    {% if user.is_authenticated %}
+    <div class="header_startproject">
+            <a href="{% url 'main:new:new_page' %}">new</a>
+    </div>
+    {% endif %}
+    <div class="header_logo">
+        <a href="{% url 'main:main_page' %}">HI!</a>
+    </div>
+        {% if user.is_authenticated %}
+            <div class='login_true'>
+                <a href="{{user.profile.get_absolute_url}}">
+                    {% if user.profile.img %}
+                        <img src={{user.profile.img.url}} width="30" height="30" />
+                    {% else %}
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVFilEhfPhyV9IK381IiXSRYG5xrEEs-qyKcUaFZvZx54nnbVTog" width="30" height="30" />
+                    {% endif %}
+                </a>
+            </div>
+        {% else %}
+            <div class='login_false'>
+                <a href="{% url 'main:login:login_page' %}">sign in</a>
+            </div>
+        {% endif %}
+</div>

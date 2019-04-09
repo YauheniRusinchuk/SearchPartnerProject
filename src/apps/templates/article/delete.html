@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+        <div class='main_container'>
+            <div class='delete_container'>
+            <form method="post">{% csrf_token %}
+                <p>Are you sure you want to delete "{{ object.title }}"?</p>
+                <input class='btn_delete' type="submit" value="delete">
+            </form>
+            </div>
+        </div>
+
+{% endblock %}
